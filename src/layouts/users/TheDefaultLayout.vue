@@ -1,7 +1,7 @@
 <template>
   <div>
     <nav
-      class="flex items-center px-20 xl:flex-row flex-col  py-0 border-b-[1px] border-gray-300 mb-8">
+      class="flex items-center px-60 xl:flex-row flex-col  py-0 border-b-[1px] border-gray-300 mb-8">
       <div class="w-1/5">
         <img
           class="w-[120px] h-[120px]"

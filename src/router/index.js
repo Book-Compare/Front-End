@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
-import DefaultLayout from '../layouts/TheDefaultLayout.vue'
+import DefaultLayout from '../layouts/users/TheDefaultLayout.vue'
 import DashboardLayout from '../layouts/TheDashboardLayout.vue'
 
 const routes = [

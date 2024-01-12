@@ -3,8 +3,11 @@
 # Install project dependencies
 npm install
 
-# Install Vue CLI globally
+# Install Vue CLI 
 npm install @vue/cli
+
+# Install Vue yarn 
+npm install --save-dev yarn
 
 # Save the file and give it execute permissions
 chmod +x local_setup.sh
