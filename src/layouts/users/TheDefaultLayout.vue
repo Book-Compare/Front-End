@@ -1,7 +1,7 @@
 <template>
   <div>
     <nav
-      class="flex items-center px-60 xl:flex-row flex-col  py-0 border-b-[1px] border-gray-300 mb-8">
+      class="flex items-center px-40 xl:flex-row flex-col  py-0 border-b-[1px] border-gray-300 mb-8">
       <div class="w-1/5">
         <img
           class="w-[120px] h-[120px]"
@@ -9,8 +9,8 @@
           alt="" />
       </div>
       <div class="flex justify-around py-0 items-center w-4/5">
-        <div class="group relative inline-block text-center mr-8">
-        <span class="material-symbols-outlined text-4xl cursor-pointer">
+        <div class="group relative inline-block text-center mr-8 w-1/5">
+        <span class="material-symbols-outlined text-4xl cursor-pointer ">
           widgets
         </span>
         <div
@@ -61,8 +61,8 @@
           </div>
         </form>
       </div>
-      <div class="flex justify-between">
-        <div class="flex flex-col cursor-pointer mx-8">
+      <div class="flex justify-end w-1/3">
+        <div class="flex flex-col cursor-pointer ">
           <span class="material-symbols-outlined text-4xl">notifications</span>
           <p class="text-gray-700 block px-4 py-2 text-sm">Thông báo</p>
         </div>
