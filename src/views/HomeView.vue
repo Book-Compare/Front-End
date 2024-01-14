@@ -161,7 +161,7 @@
               <article>
                 <img src="https://reviewsach.net/wp-content/uploads/2023/12/noi-niem-tham-tu-galileo-reviewsach.jpg" alt="">
                 <div class="mt-4">
-                  <h3 class="text-2xl line-clamp-2 mb-1">Nỗi niềm của Thám tử Galileo (Higashino Keigo) – Nỗi niềm của người làm khoa học</h3>
+                  <h3 class="text-2xl line-clamp-2 mb-1 font-bold">Nỗi niềm của Thám tử Galileo (Higashino Keigo) – Nỗi niềm của người làm khoa học</h3>
                   <p class="mb-1">14/01/2024</p>
                   <span class="line-clamp-3">Sau Giấc mơ tiên tri, Nỗi niềm của Thám tử Galileo là tập truyện ngắn thứ hai về nhà vật lí học Manabu Yukawa được phát hành ở Việt Nam. Gồm 5 truyện ngắn, mỗi truyện mang một nội dung độc lập song tất cả, vẫn nhằm hướng đến việc, góp những mảnh xếp hình, tạo nên chân dung Thám tử Galileo – nhà vật lí học Manabu Yukawa có phần lập dị song cái tâm anh dành cho khoa học, cho con người, lại thật sự, trong sáng vô ngần.</span>
                 </div>
@@ -173,7 +173,7 @@
               <article class="flex mb-2" v-for="product in 4" :key="product">
                 <img src="https://reviewsach.net/wp-content/uploads/2023/07/thanh-guom-do-du.jpg" class="w-[210px] mr-4" alt="">
                 <div class="">
-                  <h3 class="text-2xl line-clamp-2 mb-1">Thanh gươm do dự và những đứa trẻ tuổi vị thành niên phạm tội</h3>
+                  <h3 class="text-xl font-bold line-clamp-2 mb-1">Thanh gươm do dự và những đứa trẻ tuổi vị thành niên phạm tội</h3>
                   <span
                   class="text-center bg-red-600 p-[5px]  rounded text-white text-[1rem]" >Trinh thám</span >
                   <p class="my-1">14/01/2024</p>
