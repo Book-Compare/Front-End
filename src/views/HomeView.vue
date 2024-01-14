@@ -1,26 +1,24 @@
 <template>
+  <!-- Start Banner Slide -->
   <div class="h-[320px] w-full px-40 mb-10 flex">
     <div class="h-full w-3/4">
       <carousel
         :items-to-show="1"
         :autoplay="slideOptions.autoplay"
         :transition="slideOptions.transition"
-        :wrap-around="slideOptions.wrapAround"
-      >
+        :wrap-around="slideOptions.wrapAround">
         <slide :key="slide">
           <img
             src="https://cdn0.fahasa.com/media/magentothem/banner7/Cardgame_Slide_T1_840x320.jpg"
             class="w-full object-fill h-[320px]"
-            alt=""
-          />
+            alt=""/>
         </slide>
 
         <slide :key="slide">
           <img
             src="https://cdn0.fahasa.com/media/magentothem/banner7/TrangDoChoiT124_Slide_840x320_Thang1.jpg"
             class="w-full object-fill h-[320px]"
-            alt=""
-          />
+            alt="" />
         </slide>
 
         <slide :key="slide">
@@ -49,39 +47,36 @@
         <img
           src="https://cdn0.fahasa.com/media/wysiwyg/Thang-01-2024/VNPay_392x156.jpg"
           class="w-full object-fill h-[150px]"
-          alt=""
-        />
+          alt="" />
       </div>
       <div>
         <img
           src="https://cdn0.fahasa.com/media/wysiwyg/Thang-01-2024/392x156_quy1.jpg"
           class="w-full object-fill h-[150px]"
-          alt=""
-        />
+          alt=""/>
       </div>
     </div>
   </div>
+  <!-- End Banner Slide -->
+  <!-- Start discount -->
   <div
-    class="w-full h-[560px] text-start bg-center bg-no-repeat bg-cover"
+    class="w-full h-[560px] text-start bg-center bg-no-repeat bg-cover px-40 mb-10"
     style="
-      background-image: url('https://cdn0.fahasa.com/media/fahasa_web_image/flash_sale_background_image.jpg');
-    "
-  >
-  <div class="flex items-center px-8 pt-4">
-    <span class="material-symbols-outlined text-3xl text-white">
-trending_down
-</span>
-    <h1 class="text-3xl font-bold text-white ml-4">Giảm giá sốc</h1>
-  </div>
+      background-image: url('https://cdn0.fahasa.com/media/fahasa_web_image/flash_sale_background_image.jpg');">
+    <div class="flex items-center pr-8 pt-8">
+      <span class="material-symbols-outlined text-3xl text-white">
+        trending_down
+      </span>
+      <h1 class="text-3xl font-bold tracking-tight text-white ml-4">Giảm giá sốc</h1>
+    </div>
 
     <Carousel v-bind="settings" :breakpoints="breakpoints">
       <Slide v-for="slide in 10" :key="slide">
-        <div class="carousel__item bg-white w-[266px] rounded mt-8 p-4">
+        <div class="carousel__item bg-white w-[285px] rounded-2xl mt-8 p-4">
           <div>
             <img
               src="https://cdn0.fahasa.com/media/catalog/product/2/3/231123-3.jpg"
-              alt=""
-            />
+              alt=""/>
           </div>
           <div class="mt-4">
             <p class="text-start line-clamp-2">
@@ -102,9 +97,9 @@ trending_down
                 <span class="line-through">189.000</span>
               </div>
             </div>
-            <div>
+            <!-- <div>
               <button type="button" class="mt-4 focus:outline-none text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">Xem chi tiết</button>
-            </div>
+            </div> -->
           </div>
         </div>
       </Slide>
@@ -113,6 +108,83 @@ trending_down
       </template>
     </Carousel>
   </div>
+  <!-- End discount -->
+  <!-- Start popular product -->
+  <div class="w-full px-40 text-start mb-10">
+    <div class="flex">
+      <span class="material-symbols-outlined text-3xl mr-2">trending_up</span>
+      <h2 class="mb-6 text-3xl font-bold tracking-tight text-gray-900">Sản phẩm nổi bật</h2>
+    </div>
+    <div class="flex flex-wrap justify-between w-full">
+      <div v-for="product in 12" :key="product" class="carousel__item bg-white w-[285px] rounded-2xl mb-8 p-4 border shadow-lg">
+          <div>
+            <img
+              src="https://cdn0.fahasa.com/media/catalog/product/2/3/231123-3.jpg"
+              alt=""/>
+          </div>
+          <div class="mt-4">
+            <p class="text-start line-clamp-2">
+              Khóa Chặt Cửa Nào Suzume - Bản Bìa Cứng - Tặng Kèm Keyhole Card +
+              Set 6 Movie Frame Card
+            </p>
+            <div class="text-start mt-2">
+              <div class="flex items-center">
+                <span class="text-start text-red-600 font-bold text-[18px]"
+                  >133.000 đ</span
+                >
+                <span
+                  class="text-center bg-red-600 p-[5px] ml-2 rounded text-white font-bold text-[1rem]"
+                  >-30%</span
+                >
+              </div>
+              <div>
+                <span class="line-through">189.000</span>
+              </div>
+            </div>
+            <!-- <div>
+              <button type="button" class="mt-4 focus:outline-none text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">Xem chi tiết</button>
+            </div> -->
+          </div>
+        </div>
+    </div>
+  </div>
+  <!-- End popular product -->
+  <!-- Start news -->
+  <div class="px-40 w-full text-start mb-10">
+    <div class="flex">
+      <span class="material-symbols-outlined text-3xl mr-2">news</span>
+      <h2 class="mb-6 text-3xl font-bold tracking-tight text-gray-900">Tin tức mỗi ngày</h2>
+    </div>
+    <div class="flex w-full gap-4">
+        <div class="w-3/5">
+            <div class="w-full">
+              <article>
+                <img src="https://reviewsach.net/wp-content/uploads/2023/12/noi-niem-tham-tu-galileo-reviewsach.jpg" alt="">
+                <div class="mt-4">
+                  <h3 class="text-2xl line-clamp-2 mb-1">Nỗi niềm của Thám tử Galileo (Higashino Keigo) – Nỗi niềm của người làm khoa học</h3>
+                  <p class="mb-1">14/01/2024</p>
+                  <span class="line-clamp-2">Sau Giấc mơ tiên tri, Nỗi niềm của Thám tử Galileo là tập truyện ngắn thứ hai về nhà vật lí học Manabu Yukawa được phát hành ở Việt Nam. Gồm 5 truyện ngắn, mỗi truyện mang một nội dung độc lập song tất cả, vẫn nhằm hướng đến việc, góp những mảnh xếp hình, tạo nên chân dung Thám tử Galileo – nhà vật lí học Manabu Yukawa có phần lập dị song cái tâm anh dành cho khoa học, cho con người, lại thật sự, trong sáng vô ngần.</span>
+                </div>
+              </article>
+            </div>
+        </div>
+        <div class="w-2/5 h-full">
+            <div class="w-full flex flex-col h-full">
+              <article class="flex mb-2" v-for="product in 3" :key="product">
+                <img src="https://reviewsach.net/wp-content/uploads/2023/07/thanh-guom-do-du.jpg" class="w-[210px] h-[236px] mr-4" alt="">
+                <div class="">
+                  <h3 class="text-2xl line-clamp-2 mb-1">Thanh gươm do dự và những đứa trẻ tuổi vị thành niên phạm tội</h3>
+                  <span
+                  class="text-center bg-red-600 p-[5px]  rounded text-white text-[1rem]" >Trinh thám</span >
+                  <p class="my-1">14/01/2024</p>
+                  <span class="line-clamp-3">Bản án hung thủ nhận về không có tính răn đe, cũng không khiến người nhà nạn nhân cảm thấy được an ủi</span>
+                </div>
+              </article>
+            </div>
+        </div>
+    </div>
+  </div>
+  <!-- End news -->
 </template>
 
 <script>
@@ -139,13 +211,18 @@ export default {
       },
       breakpoints: {
         // 700px and up
+        500: {
+          itemsToShow: 2,
+          snapAlign: "center",
+        },
+        // 700px and up
         700: {
-          itemsToShow: 3.5,
+          itemsToShow: 3,
           snapAlign: "center",
         },
         // 1024 and up
-        1024: {
-          itemsToShow: 5,
+        1024: {       
+          itemsToShow: 4,
           snapAlign: "start",
         },
       },
