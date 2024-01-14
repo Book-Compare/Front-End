@@ -1,7 +1,7 @@
 <template>
   <div>
     <nav
-      class="flex items-center px-40 xl:flex-row flex-col py-0 border-b-[1px] border-gray-300 mb-8"
+      class="flex items-center px-32 xl:flex-row flex-col py-0 border-b-[1px] border-gray-300 mb-8"
     >
       <div class="w-1/5">
         <img
@@ -73,14 +73,14 @@
         </div>
         <div class="flex justify-end w-1/3">
           <div class="flex flex-col cursor-pointer">
-            <span class="material-symbols-outlined text-4xl"
+            <span class="material-symbols-outlined text-2xl"
               >notifications</span
             >
-            <p class="text-gray-700 block px-4 py-2 text-sm">Thông báo</p>
+            <p class="text-gray-600 block px-4 py-2 text-sm">Thông báo</p>
           </div>
           <div class="flex flex-col cursor-pointer">
-            <span class="material-symbols-outlined text-4xl">person</span>
-            <p class="text-gray-700 block px-4 py-2 text-sm">Tài khoản</p>
+            <span class="material-symbols-outlined text-2xl">person</span>
+            <p class="text-gray-600 block px-4 py-2 text-sm">Tài khoản</p>
           </div>
         </div>
       </div>

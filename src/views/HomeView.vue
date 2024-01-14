@@ -1,6 +1,6 @@
 <template>
   <!-- Start Banner Slide -->
-  <div class="h-[320px] w-full px-40 mb-10 flex">
+  <div class="h-[320px] w-full px-32 mb-10 flex">
     <div class="h-full w-3/4">
       <carousel
         :items-to-show="1"
@@ -60,7 +60,7 @@
   <!-- End Banner Slide -->
   <!-- Start discount -->
   <div
-    class="w-full h-[560px] text-start bg-center bg-no-repeat bg-cover px-40 mb-10"
+    class="w-full h-[560px] text-start bg-center bg-no-repeat bg-cover px-32 mb-10"
     style="
       background-image: url('https://cdn0.fahasa.com/media/fahasa_web_image/flash_sale_background_image.jpg');">
     <div class="flex items-center pr-8 pt-8">
@@ -72,7 +72,7 @@
 
     <Carousel v-bind="settings" :breakpoints="breakpoints">
       <Slide v-for="slide in 10" :key="slide">
-        <div class="carousel__item bg-white w-[285px] rounded-2xl mt-8 p-4">
+        <div class="carousel__item bg-white w-[285px] rounded-2xl mt-8 p-4 cursor-pointer">
           <div>
             <img
               src="https://cdn0.fahasa.com/media/catalog/product/2/3/231123-3.jpg"
@@ -110,13 +110,13 @@
   </div>
   <!-- End discount -->
   <!-- Start popular product -->
-  <div class="w-full px-40 text-start mb-10">
+  <div class="w-full px-32 text-start mb-10">
     <div class="flex">
       <span class="material-symbols-outlined text-3xl mr-2">trending_up</span>
       <h2 class="mb-6 text-3xl font-bold tracking-tight text-gray-900">Sản phẩm nổi bật</h2>
     </div>
     <div class="flex flex-wrap justify-between w-full">
-      <div v-for="product in 12" :key="product" class="carousel__item bg-white w-[285px] rounded-2xl mb-8 p-4 border shadow-lg">
+      <div v-for="product in 12" :key="product" class="carousel__item bg-white w-[285px] rounded-2xl mb-8 p-4 border shadow-lg cursor-pointer">
           <div>
             <img
               src="https://cdn0.fahasa.com/media/catalog/product/2/3/231123-3.jpg"
@@ -150,34 +150,34 @@
   </div>
   <!-- End popular product -->
   <!-- Start news -->
-  <div class="px-40 w-full text-start mb-10">
+  <div class="px-32 w-full text-start mb-10">
     <div class="flex">
       <span class="material-symbols-outlined text-3xl mr-2">news</span>
       <h2 class="mb-6 text-3xl font-bold tracking-tight text-gray-900">Tin tức mỗi ngày</h2>
     </div>
     <div class="flex w-full gap-4">
-        <div class="w-3/5">
+        <div class="w-3/5 cursor-pointer">
             <div class="w-full">
               <article>
                 <img src="https://reviewsach.net/wp-content/uploads/2023/12/noi-niem-tham-tu-galileo-reviewsach.jpg" alt="">
                 <div class="mt-4">
                   <h3 class="text-2xl line-clamp-2 mb-1">Nỗi niềm của Thám tử Galileo (Higashino Keigo) – Nỗi niềm của người làm khoa học</h3>
                   <p class="mb-1">14/01/2024</p>
-                  <span class="line-clamp-2">Sau Giấc mơ tiên tri, Nỗi niềm của Thám tử Galileo là tập truyện ngắn thứ hai về nhà vật lí học Manabu Yukawa được phát hành ở Việt Nam. Gồm 5 truyện ngắn, mỗi truyện mang một nội dung độc lập song tất cả, vẫn nhằm hướng đến việc, góp những mảnh xếp hình, tạo nên chân dung Thám tử Galileo – nhà vật lí học Manabu Yukawa có phần lập dị song cái tâm anh dành cho khoa học, cho con người, lại thật sự, trong sáng vô ngần.</span>
+                  <span class="line-clamp-3">Sau Giấc mơ tiên tri, Nỗi niềm của Thám tử Galileo là tập truyện ngắn thứ hai về nhà vật lí học Manabu Yukawa được phát hành ở Việt Nam. Gồm 5 truyện ngắn, mỗi truyện mang một nội dung độc lập song tất cả, vẫn nhằm hướng đến việc, góp những mảnh xếp hình, tạo nên chân dung Thám tử Galileo – nhà vật lí học Manabu Yukawa có phần lập dị song cái tâm anh dành cho khoa học, cho con người, lại thật sự, trong sáng vô ngần.</span>
                 </div>
               </article>
             </div>
         </div>
-        <div class="w-2/5 h-full">
+        <div class="w-2/5 h-full cursor-pointer">
             <div class="w-full flex flex-col h-full">
-              <article class="flex mb-2" v-for="product in 3" :key="product">
-                <img src="https://reviewsach.net/wp-content/uploads/2023/07/thanh-guom-do-du.jpg" class="w-[210px] h-[236px] mr-4" alt="">
+              <article class="flex mb-2" v-for="product in 4" :key="product">
+                <img src="https://reviewsach.net/wp-content/uploads/2023/07/thanh-guom-do-du.jpg" class="w-[210px] mr-4" alt="">
                 <div class="">
                   <h3 class="text-2xl line-clamp-2 mb-1">Thanh gươm do dự và những đứa trẻ tuổi vị thành niên phạm tội</h3>
                   <span
                   class="text-center bg-red-600 p-[5px]  rounded text-white text-[1rem]" >Trinh thám</span >
                   <p class="my-1">14/01/2024</p>
-                  <span class="line-clamp-3">Bản án hung thủ nhận về không có tính răn đe, cũng không khiến người nhà nạn nhân cảm thấy được an ủi</span>
+                  <span class="line-clamp-2">Bản án hung thủ nhận về không có tính răn đe, cũng không khiến người nhà nạn nhân cảm thấy được an ủi</span>
                 </div>
               </article>
             </div>
