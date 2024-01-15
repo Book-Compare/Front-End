@@ -1,6 +1,6 @@
 <template>
   <!-- Start Banner Slide -->
-  <div class="h-[320px] w-full xl:px-32 lg:px-32 mb-10 flex">
+  <div class="h-[320px] w-full xl:px-32 2xl:px-32 lg:px-32 mb-10 flex">
     <div class="h-full lg:w-3/4 xl:w-3/4  w-full">
       <carousel
         :items-to-show="1"
@@ -60,7 +60,7 @@
   <!-- End Banner Slide -->
   <!-- Start discount -->
   <div
-    class="w-full h-[560px] text-start bg-center bg-no-repeat bg-cover xl:px-32 lg:px-32 mb-10"
+    class="w-full h-[560px] text-start bg-center bg-no-repeat bg-cover xl:px-32 2xl:px-32 lg:px-32 mb-10"
     style="
       background-image: url('https://cdn0.fahasa.com/media/fahasa_web_image/flash_sale_background_image.jpg');">
     <div class="flex items-center pr-8 pt-8">
@@ -110,7 +110,7 @@
   </div>
   <!-- End discount -->
   <!-- Start popular product -->
-  <div class="w-full  xl:px-32 lg:px-32 text-start mb-10">
+  <div class="w-full  xl:px-32 2xl:px-32 lg:px-32 text-start mb-10">
     <div class="flex">
       <span class="material-symbols-outlined text-3xl mr-2">trending_up</span>
       <h2 class="mb-6 text-3xl font-bold tracking-tight text-gray-900">Sản phẩm nổi bật</h2>
@@ -150,7 +150,7 @@
   </div>
   <!-- End popular product -->
   <!-- Start news -->
-  <div class="lg:px-32 xl:px-32 p-0 w-full text-start mb-10">
+  <div class="xl:px-32 2xl:px-32 p-0 w-full text-start mb-10">
     <div class="flex">
       <span class="material-symbols-outlined text-3xl mr-2">news</span>
       <h2 class="mb-6 text-3xl font-bold tracking-tight text-gray-900">Tin tức mỗi ngày</h2>
