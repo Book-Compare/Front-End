@@ -1,7 +1,7 @@
 <template>
   <div>
     <nav
-      class="flex items-center px-32 xl:flex-row flex-col py-0 border-b-[1px] border-gray-300 mb-8"
+      class="flex items-center p-0 xl:px-32 lg:px-32 xl:flex-row flex-col py-0 border-b-[1px] border-gray-300 mb-8"
     >
       <div class="w-1/5">
         <img
@@ -10,7 +10,7 @@
           alt=""
         />
       </div>
-      <div class="flex justify-around py-0 items-center w-4/5">
+      <div class="flex xl:justify-around lg:justify-around justify-center py-0 items-center xl:w-4/5 lg:w-4/5 w-full">
         <div class="group relative inline-block text-center mr-8 w-1/5">
           <span class="material-symbols-outlined text-4xl cursor-pointer">
             widgets
@@ -88,32 +88,29 @@
     <router-view></router-view>
 
     <footer class="bg-gray-800 rounded-lg shadow m-4 dark:bg-gray-800">
-      <div
-        class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between"
-      >
-        <span class="text-sm text-white sm:text-center dark:text-white"
-          >© 2023
-          <a href="https://flowbite.com/" class="hover:underline">Flowbite™</a>.
-          All Rights Reserved.
-        </span>
-        <ul
-          class="flex flex-wrap items-center mt-3 text-sm font-medium text-white dark:text-white sm:mt-0"
-        >
-          <li>
-            <a href="#" class="hover:underline me-4 md:me-6">About</a>
-          </li>
-          <li>
-            <a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
-          </li>
-          <li>
-            <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
-          </li>
-          <li>
-            <a href="#" class="hover:underline">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </footer>
+  <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+    <span class="text-sm text-white sm:text-center dark:text-white">
+      © 2023
+      <a href="https://flowbite.com/" class="hover:underline">Flowbite™</a>.
+      All Rights Reserved.
+    </span>
+    <ul class="flex justify-center flex-wrap  mt-3 text-sm font-medium text-white dark:text-white sm:mt-0">
+      <li class="mb-2 md:mb-0">
+        <a href="#" class="hover:underline me-4 md:me-6">About</a>
+      </li>
+      <li class="mb-2 md:mb-0">
+        <a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
+      </li>
+      <li class="mb-2 md:mb-0">
+        <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
+      </li>
+      <li>
+        <a href="#" class="hover:underline">Contact</a>
+      </li>
+    </ul>
+  </div>
+</footer>
+
   </div>
 </template>
 
