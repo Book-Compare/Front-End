@@ -116,21 +116,21 @@
       <h2 class="mb-6 text-3xl font-bold tracking-tight text-gray-900">Sản phẩm nổi bật</h2>
     </div>
     <div class="flex flex-wrap justify-between w-full">
-      <div v-for="product in 12" :key="product" class="carousel__item bg-white w-[285px] rounded-2xl mb-8 p-4 border shadow-lg cursor-pointer">
+      <div v-for="(product, index) in productData" :key="index" class="carousel__item bg-white w-[285px] rounded-2xl mb-8 p-4 border shadow-lg cursor-pointer">
           <div>
             <img
-              src="https://cdn0.fahasa.com/media/catalog/product/2/3/231123-3.jpg"
+              :src="product.images"
               alt=""/>
           </div>
           <div class="mt-4">
-            <p class="text-start line-clamp-2">
-              Khóa Chặt Cửa Nào Suzume - Bản Bìa Cứng - Tặng Kèm Keyhole Card +
-              Set 6 Movie Frame Card
+            <p class="text-start line-clamp-2 h-[48px]">
+              {{ product.name }}
+              
             </p>
             <div class="text-start mt-2">
               <div class="flex items-center">
                 <span class="text-start text-red-600 font-bold text-[18px]"
-                  >133.000 đ</span
+                  >{{ formatNumber(product.price) }}đ</span
                 >
                 <span
                   class="text-center bg-red-600 p-[5px] ml-2 rounded text-white font-bold text-[1rem]"
@@ -189,6 +189,7 @@
 
 <script>
 import "vue3-carousel/dist/carousel.css";
+import MockDATA from '../assets/Data/MOCK_DATA.json';
 import { Carousel, Slide, Navigation } from "vue3-carousel";
 export default {
   name: "HomeView",
@@ -199,6 +200,7 @@ export default {
   },
   data() {
     return {
+      productData: MockDATA.slice(0, 20),
       slideOptions: {
         autoplay: 2000,
         transition: 1000,
@@ -227,6 +229,12 @@ export default {
         },
       },
     };
+  },
+  methods: {
+    formatNumber(value) {
+      // Sử dụng Intl.NumberFormat để định dạng số
+      return new Intl.NumberFormat().format(value);
+    },
   },
 };
 </script>
