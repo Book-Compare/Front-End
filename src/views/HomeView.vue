@@ -1,30 +1,31 @@
 <template>
   <!-- Start Banner Slide -->
-  <div class="h-[320px] w-full xl:px-32 2xl:px-32 lg:px-32 mb-10 flex">
-    <div class="h-full lg:w-3/4 xl:w-3/4  w-full">
+  <div class="w-full xl:px-32 2xl:px-32 lg:px-32 sm:mb-32 md:mb-16 lg:mb-10 xl:mb-10 mb-8 flex">
+    <div class="lg:w-3/4 xl:w-3/4 w-full">
       <carousel
         :items-to-show="1"
         :autoplay="slideOptions.autoplay"
         :transition="slideOptions.transition"
-        :wrap-around="slideOptions.wrapAround">
-        <slide :key="slide">
+        :wrap-around="slideOptions.wrapAround"
+        class="h-full">
+        <slide :key="slide" class="h-full">
           <img
             src="https://cdn0.fahasa.com/media/magentothem/banner7/Cardgame_Slide_T1_840x320.jpg"
-            class="w-full object-fill h-[320px]"
+            class="w-full object-fill lg:h-[300px]"
             alt=""/>
         </slide>
 
         <slide :key="slide">
           <img
             src="https://cdn0.fahasa.com/media/magentothem/banner7/TrangDoChoiT124_Slide_840x320_Thang1.jpg"
-            class="w-full object-fill h-[320px]"
+            class="w-full object-fill lg:h-[300px]"
             alt="" />
         </slide>
 
         <slide :key="slide">
           <img
             src="https://cdn0.fahasa.com/media/magentothem/banner7/NewBooksYearT124_Banner_resize_Slide_840x320.jpg"
-            class="w-full object-fill h-[320px]"
+            class="w-full object-fill lg:h-[300px]"
             alt=""
           />
         </slide>
@@ -32,14 +33,14 @@
         <slide :key="slide">
           <img
             src="https://cdn0.fahasa.com/media/magentothem/banner7/VPP_Slide_T1_840x320.jpg"
-            class="w-full object-fill h-[320px]"
+            class="w-full object-fill lg:h-[300px]"
             alt=""
           />
         </slide>
 
-        <template #addons>
+        <!-- <template #addons>
           <navigation />
-        </template>
+        </template> -->
       </carousel>
     </div>
     <div class="w-1/4 ml-8  hidden lg:flex sm:hidden md:hidden xl:flex flex-col h-full justify-between">
