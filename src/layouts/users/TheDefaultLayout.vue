@@ -1,17 +1,15 @@
 <template>
   <div>
     <nav
-      class="flex items-center p-0 xl:px-32 2xl:px-32 lg:px-32 xl:flex-row flex-col py-0 border-b-[1px] border-gray-300 mb-8"
-    >
-      <div class="w-1/5">
-        <img
-          class="w-[120px] h-[120px]"
-          src="https://static.vecteezy.com/system/resources/previews/000/599/214/original/book-reading-logo-and-symbols-template-icons-vector.jpg"
-          alt=""
-        />
-      </div>
-      <div class="flex xl:justify-around lg:justify-around justify-center py-0 items-center xl:w-4/5 lg:w-4/5 w-full">
-        <div class="group relative inline-block text-center mr-8 w-1/5">
+      class="flex items-center p-0 xl:px-32 2xl:px-32 lg:px-32 xl:flex-row flex-col py-0 border-b-[1px] border-gray-300 mb-8">
+    <div class="flex xl:justify-around lg:justify-around justify-between py-0 items-center w-full">
+        <div>
+          <img
+            class="w-[120px] h-[120px]"
+            src="https://static.vecteezy.com/system/resources/previews/000/599/214/original/book-reading-logo-and-symbols-template-icons-vector.jpg"
+            alt=""/>
+        </div>
+        <div class="group relative inline-block text-center w-1/5">
           <span class="material-symbols-outlined text-4xl cursor-pointer">
             widgets
           </span>
@@ -71,7 +69,7 @@
             </div>
           </form>
         </div>
-        <div class="flex justify-end w-1/3">
+        <div class="xl:flex lg:flex hidden justify-end w-1/3">
           <div class="flex flex-col cursor-pointer">
             <span class="material-symbols-outlined text-2xl"
               >notifications</span

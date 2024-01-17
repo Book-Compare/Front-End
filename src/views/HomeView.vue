@@ -60,7 +60,7 @@
   <!-- End Banner Slide -->
   <!-- Start discount -->
   <div
-    class="w-full h-[560px] text-start bg-center bg-no-repeat bg-cover xl:px-32 2xl:px-32 lg:px-32 mb-10"
+    class="w-full lg:h-[560px] xl:h-[560px] h-[450px] text-start bg-center bg-no-repeat bg-cover xl:px-32 2xl:px-32 lg:px-32 mb-10"
     style="
       background-image: url('https://cdn0.fahasa.com/media/fahasa_web_image/flash_sale_background_image.jpg');">
     <div class="flex items-center pr-8 pt-8">
@@ -85,8 +85,7 @@
             </p>
             <div class="text-start mt-2">
               <div class="flex items-center">
-                <span class="text-start text-red-600 font-bold text-[18px]"
-                  >133.000 đ</span
+                <span class="text-start text-red-600 font-bold text-[18px]">133.000 đ</span
                 >
                 <span
                   class="text-center bg-red-600 p-[5px] ml-2 rounded text-white font-bold text-[1rem]"
@@ -116,7 +115,7 @@
       <h2 class="mb-6 text-3xl font-bold tracking-tight text-gray-900">Sản phẩm nổi bật</h2>
     </div>
     <div class="flex justify-center flex-wrap  xl:justify-between lg:justify-between w-full">
-      <div v-for="(product, index) in productData" :key="index" class="carousel__item bg-white w-[285px] rounded-2xl mb-8 p-4 border shadow-lg cursor-pointer">
+      <div v-for="(product, index) in productData" :key="index" class="carousel__item bg-white xl:w-[285px] lg::w-[285px] w-[190px] mx-[4px] rounded-2xl mb-8 p-4 border shadow-lg cursor-pointer">
           <div>
             <img
               :src="product.images"
@@ -212,14 +211,18 @@ export default {
         wrapAround: true,
       },
       breakpoints: {
-        // 700px and up
-        500: {
+        400: {
           itemsToShow: 2,
           snapAlign: "center",
         },
         // 700px and up
+        500: {
+          itemsToShow: 4,
+          snapAlign: "center",
+        },
+        // 700px and up
         700: {
-          itemsToShow: 3,
+          itemsToShow: 4,
           snapAlign: "center",
         },
         // 1024 and up
