@@ -60,7 +60,7 @@
   <!-- End Banner Slide -->
   <!-- Start discount -->
   <div
-    class="w-full lg:h-[560px] xl:h-[560px] h-[450px] text-start bg-center bg-no-repeat bg-cover xl:px-32 2xl:px-32 lg:px-32 mb-10"
+    class="w-full pb-12 text-start bg-center bg-no-repeat bg-cover xl:px-32 2xl:px-32 lg:px-32 mb-10"
     style="
       background-image: url('https://cdn0.fahasa.com/media/fahasa_web_image/flash_sale_background_image.jpg');">
     <div class="flex items-center pr-8 pt-8">
@@ -109,13 +109,13 @@
   </div>
   <!-- End discount -->
   <!-- Start popular product -->
-  <div class="w-full  xl:px-32 2xl:px-32 lg:px-32 text-start mb-10">
+  <div class="w-full xl:px-32 2xl:px-32 lg:px-32 text-start mb-10">
     <div class="flex">
       <span class="material-symbols-outlined text-3xl mr-2">trending_up</span>
       <h2 class="mb-6 text-3xl font-bold tracking-tight text-gray-900">Sản phẩm nổi bật</h2>
     </div>
     <div class="flex justify-center flex-wrap  xl:justify-between lg:justify-between w-full">
-      <div v-for="(product, index) in productData" :key="index" class="carousel__item bg-white xl:w-[285px] lg::w-[285px] w-[190px] mx-[4px] rounded-2xl mb-8 p-4 border shadow-lg cursor-pointer">
+      <div v-for="(product, index) in productData" :key="index" class="carousel__item bg-white xl:w-[285px] lg:w-[285px] md:w-[285px] w-[190px] mx-[4px] rounded-2xl mb-8 p-4 border shadow-lg cursor-pointer">
           <div>
             <img
               :src="product.images"
@@ -211,18 +211,18 @@ export default {
         wrapAround: true,
       },
       breakpoints: {
-        400: {
-          itemsToShow: 2,
+        320: {
+          itemsToShow: 1.5,
           snapAlign: "center",
         },
         // 700px and up
         500: {
-          itemsToShow: 4,
+          itemsToShow: 3,
           snapAlign: "center",
         },
         // 700px and up
         700: {
-          itemsToShow: 4,
+          itemsToShow: 3,
           snapAlign: "center",
         },
         // 1024 and up
