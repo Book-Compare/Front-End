@@ -1,7 +1,13 @@
 <template>
+  <div class="fixed z-10 w-full left-0 top-0 intro h-[100vh] bg-[#161616]" ref="intro">
+      <h1 class="text-2xl font-bold absolute top-1/2 text-white left-1/2 transform -translate-x-1/2 -translate-y-1/2"  ref="logo">
+         <span class="logo relative inline-block bottom-[-20px] opacity-0 mr-2" ref="logoSpan">Book</span>
+         <span class="logo relative inline-block bottom-[-20px] opacity-0" ref="logoSpan">Compare</span>
+      </h1>
+  </div>
   <div>
     <nav
-      class="flex items-center p-0 xl:px-32 2xl:px-32 lg:px-32 xl:flex-row flex-col py-0 border-b-[1px] border-gray-300 mb-8">
+      class="flex items-center p-0 xl:px-32 lg:px-12 2xl:px-32 xl:flex-row flex-col py-0 border-b-[1px] border-gray-300 mb-8">
     <div class="flex xl:justify-around lg:justify-around justify-between py-0 items-center w-full">
         <div>
           <img
@@ -116,5 +122,50 @@
 export default {
   name: "DefaultLayout",
   components: {},
+  mounted(){
+    const intro = this.$refs.intro;
+    const logoSpans = document.querySelectorAll('.logo');
+    window.addEventListener('DOMContentLoaded',()=>{
+      setTimeout(() => {
+
+        logoSpans.forEach((span,index)=>{
+          setTimeout(() => {
+            span.classList.add('active');
+          }, (index + 1) * 400);
+        })
+
+
+        setTimeout(() => {
+          logoSpans.forEach((span,index)=>{
+            setTimeout(() => {
+              span.classList.remove('active');
+              span.classList.add('fade');
+            }, (index + 1) * 50);
+          })
+        }, 2000);
+
+        setTimeout(() => {
+          intro.style.top = "-100vh";
+        }, 2300);
+
+      });
+    })
+  }
 };
 </script>
+
+<style scoped>
+    .logo.active{
+      bottom: 0;
+      opacity: 1;
+      transition: ease-in-out 0.7s;
+    }
+    .logo.fade{
+      bottom:150px;
+      opacity: 0;
+      transition: ease-in-out 0.5s;
+    }
+    .intro{
+      transition: 1s;
+    }
+</style>
