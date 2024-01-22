@@ -1,7 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
+import ListAdmin from '../views/Dashboard/Admins/ListAdmin.vue'
 import DefaultLayout from '../layouts/users/TheDefaultLayout.vue'
+import AdminLayout from '../layouts/Admin/AdminLayout.vue'
 import DashboardLayout from '../layouts/TheDashboardLayout.vue'
 
 const routes = [
@@ -24,6 +26,28 @@ const routes = [
       {
         path: '',
         component: AboutView,
+      },
+    ],
+  },
+  {
+    path: '/dashboard',
+    name: 'dashboard',
+    component: AdminLayout,
+    children: [
+      {
+        path: '',
+        component: AboutView,
+      },
+    ],
+  },
+  {
+    path: '/admin',
+    name: 'admin',
+    component: AdminLayout,
+    children: [
+      {
+        path: '',
+        component: ListAdmin,
       },
     ],
   }

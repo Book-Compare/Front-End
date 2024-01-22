@@ -16,9 +16,10 @@
             alt=""/>
         </div>
         <div class="group relative inline-block text-center w-1/5">
-          <span class="material-symbols-outlined text-4xl cursor-pointer">
-            widgets
-          </span>
+              <span class="material-symbols-outlined text-4xl cursor-pointer">
+                      widgets
+              </span>
+
           <div
             class="group-hover:block dropdown-menu absolute hidden h-auto z-30 left-[410px] transform -translate-x-1/2 top-[85px]"
           >
@@ -31,6 +32,11 @@
             </ul>
           </div>
         </div>
+
+        <!-- Drawer -->
+
+
+        <!-- End Drawer -->
 
         <div class="w-3/4 hidden md:block lg:block xl:block">
           <form action="" method="post">
@@ -122,6 +128,11 @@
 export default {
   name: "DefaultLayout",
   components: {},
+  data(){
+    return {
+        drawer: false,
+      };
+  },
   mounted(){
     const intro = this.$refs.intro;
     const logoSpans = document.querySelectorAll('.logo');
