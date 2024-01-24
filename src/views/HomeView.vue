@@ -1,5 +1,4 @@
 <template>
-  <!-- Start Banner Slide -->
   <div class="w-full xl:px-32 2xl:px-32 lg:px-12 sm:mb-32 md:mb-16 lg:mb-10 xl:mb-10 mb-8 flex">
     <div class="lg:w-3/4 xl:w-3/4 w-full">
       <carousel
@@ -228,7 +227,11 @@ export default {
         },
         // 1024 and up
         1024: {       
-          itemsToShow: 3,
+          itemsToShow: 4,
+          snapAlign: "start",
+        },
+        1280: {       
+          itemsToShow: 4,
           snapAlign: "start",
         },
       },
