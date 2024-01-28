@@ -1,10 +1,11 @@
 <template>
-  <div class="fixed z-10 w-full left-0 top-0 intro h-[100vh] bg-[#161616]" ref="intro">
+  <!-- <div class="fixed z-10 w-full left-0 top-0 intro h-[100vh] bg-[#161616]" ref="intro">
       <h1 class="text-2xl font-bold absolute top-1/2 text-white left-1/2 transform -translate-x-1/2 -translate-y-1/2"  ref="logo">
          <span class="logo relative inline-block bottom-[-20px] opacity-0 mr-2" ref="logoSpan">Book</span>
          <span class="logo relative inline-block bottom-[-20px] opacity-0" ref="logoSpan">Compare</span>
       </h1>
-  </div>
+  </div> -->
+  <loading-spinner v-if="loading"></loading-spinner>
   <div>
     <nav
       class="flex items-center p-0 xl:px-32 lg:px-12 2xl:px-32 xl:flex-row flex-col py-0 border-b-[1px] border-gray-300 mb-8">
@@ -82,15 +83,43 @@
           </form>
         </div>
         <div class="xl:flex lg:flex hidden justify-end w-1/3">
-          <div class="flex flex-col cursor-pointer">
+          <div class="flex flex-col cursor-pointer justify-center">
             <span class="material-symbols-outlined text-2xl"
               >notifications</span
             >
             <p class="text-gray-600 block px-4 py-2 text-sm">Thông báo</p>
           </div>
           <div class="flex flex-col cursor-pointer">
-            <span class="material-symbols-outlined text-2xl">person</span>
-            <p class="text-gray-600 block px-4 py-2 text-sm">Tài khoản</p>
+            <div v-if="!token">
+              <router-link to="/login">
+                <span class="material-symbols-outlined text-2xl">person</span>
+                <p class="text-gray-600 block px-4 py-2 text-sm">Tài khoản</p>
+              </router-link>
+            </div>
+            <div v-else>
+              <img id="avatarButton" @click="toggleDropdown" type="button" data-dropdown-toggle="userDropdown" data-dropdown-placement="bottom-start" class="w-20 h-20 object-contain rounded-full cursor-pointer" src="https://th.bing.com/th/id/OIP.52T8HHBWh6b0dwrG6tSpVQHaFe?rs=1&pid=ImgDetMain" alt="User dropdown">
+              <!-- Dropdown menu -->
+              <div v-if="isDropdownVisible" id="userDropdown" class="z-10 fixed top-24 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                  <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
+                    <div>Bonnie Green</div>
+                    <div class="font-medium truncate">name@flowbite.com</div>
+                  </div>
+                  <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="avatarButton">
+                    <li>
+                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                    </li>
+                    <li>
+                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                    </li>
+                    <li>
+                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                    </li>
+                  </ul>
+                  <div class="py-1">
+                    <a href="#" @click.prevent="signOut" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
+                  </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -115,7 +144,7 @@
         <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
       </li>
       <li>
-        <a href="#" class="hover:underline">Contact</a>
+        <a href="#"  class="hover:underline">Contact</a>
       </li>
     </ul>
   </div>
@@ -125,47 +154,81 @@
 </template>
 
 <script>
+import LoadingSpinner from '@/components/loading.vue';
 export default {
   name: "DefaultLayout",
-  components: {},
+  components: {
+    'loading-spinner': LoadingSpinner,
+  },
   data(){
     return {
         drawer: false,
+        loading: false,
+        isDropdownVisible: false,
+        token: localStorage.getItem('token'),
       };
   },
-  mounted(){
-    const intro = this.$refs.intro;
-    const logoSpans = document.querySelectorAll('.logo');
-    window.addEventListener('DOMContentLoaded',()=>{
+  beforeRouteLeave(to, from, next) {
+    // Display spinner when starting to navigate
+    this.loading = true;
+
+    // Continue navigation after 1 second (adjust the time as needed)
+    setTimeout(() => {
+      // Hide spinner after navigation is complete
+      this.loading = false;
+      next();
+    }, 700); // Adjust the time as needed
+  },
+  methods:{
+    toggleDropdown() {
+      console.log(this.hasToken);
+      // Toggle the visibility of the dropdown menu
+      this.isDropdownVisible = !this.isDropdownVisible;
+    },
+    signOut() {
+      // Remove token from localStorage
+      localStorage.removeItem('token');
+
+      // Refresh the page
       setTimeout(() => {
-
-        logoSpans.forEach((span,index)=>{
-          setTimeout(() => {
-            span.classList.add('active');
-          }, (index + 1) * 400);
-        })
-
-
-        setTimeout(() => {
-          logoSpans.forEach((span,index)=>{
-            setTimeout(() => {
-              span.classList.remove('active');
-              span.classList.add('fade');
-            }, (index + 1) * 50);
-          })
-        }, 2000);
-
-        setTimeout(() => {
-          intro.style.top = "-100vh";
-        }, 2300);
-
-      });
-    })
+        this.loading = true;
+        location.reload();
+      }, 700);
+    },
   }
+  // mounted(){
+  //   const intro = this.$refs.intro;
+  //   const logoSpans = document.querySelectorAll('.logo');
+  //   window.addEventListener('DOMContentLoaded',()=>{
+  //     setTimeout(() => {
+
+  //       logoSpans.forEach((span,index)=>{
+  //         setTimeout(() => {
+  //           span.classList.add('active');
+  //         }, (index + 1) * 400);
+  //       })
+
+
+  //       setTimeout(() => {
+  //         logoSpans.forEach((span,index)=>{
+  //           setTimeout(() => {
+  //             span.classList.remove('active');
+  //             span.classList.add('fade');
+  //           }, (index + 1) * 50);
+  //         })
+  //       }, 2000);
+
+  //       setTimeout(() => {
+  //         intro.style.top = "-100vh";
+  //       }, 2300);
+
+  //     });
+  //   })
+  // }
 };
 </script>
 
-<style scoped>
+<!-- <style scoped>
     .logo.active{
       bottom: 0;
       opacity: 1;
@@ -179,4 +242,4 @@ export default {
     .intro{
       transition: 1s;
     }
-</style>
+</style> -->

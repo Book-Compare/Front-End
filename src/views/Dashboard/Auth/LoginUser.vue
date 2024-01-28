@@ -35,7 +35,9 @@
   
         <p class="mt-10 text-center text-sm text-gray-400">
           Not a member?
-          <a href="#" class="font-semibold leading-6 text-red-500 hover:text-red-400">Start a 7 days free trial</a>
+          <router-link to="/register">
+             <p class="font-semibold leading-6 text-red-500 hover:text-red-400"> Start a register member</p>
+          </router-link>
         </p>
       </div>
     </div>
@@ -45,7 +47,7 @@
   import { loginApi } from '@/assets/Api/api.js';
   
   export default {
-    name: "LoginAdmin",
+    name: "LoginUser",
     components: {},
     data() {
       return {

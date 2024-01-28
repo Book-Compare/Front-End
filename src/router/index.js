@@ -3,9 +3,10 @@ import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
 import ListAdmin from '../views/Dashboard/Admins/ListAdmin.vue'
 import LoginAdmin from '../views/Dashboard/Auth/LoginAdmin.vue'
+import LoginUser from '../views/Dashboard/Auth/LoginUser.vue'
+import RegisterUser from '../views/Dashboard/Auth/RegisterUser.vue'
 import DefaultLayout from '../layouts/users/TheDefaultLayout.vue'
 import AdminLayout from '../layouts/Admin/AdminLayout.vue'
-import DashboardLayout from '../layouts/TheDashboardLayout.vue'
 
 const routes = [
   {
@@ -22,11 +23,33 @@ const routes = [
   {
     path: '/about',
     name: 'about',
-    component: DashboardLayout,
+    component: DefaultLayout,
     children: [
       {
         path: '',
         component: AboutView,
+      },
+    ],
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: LoginUser,
+    children: [
+      {
+        path: '',
+        component: LoginUser,
+      },
+    ],
+  },
+  {
+    path: '/register',
+    name: 'register',
+    component: DefaultLayout,
+    children: [
+      {
+        path: '',
+        component: RegisterUser,
       },
     ],
   },
@@ -56,7 +79,7 @@ const routes = [
   {
     path: '/admin/login',
     name: 'adminLogin',
-    component: '',
+    component: LoginAdmin,
     children: [
       {
         path: '',
