@@ -115,10 +115,12 @@
       <h2 class="mb-6 text-3xl font-bold tracking-tight text-gray-900">Sản phẩm nổi bật</h2>
     </div>
     <div class="flex justify-center flex-wrap  xl:justify-between lg:justify-between w-full">
-      <div v-for="(product, index) in productData" :key="index" class="carousel__item bg-white xl:w-[285px] lg:w-[285px] md:w-[285px] w-[190px] mx-[4px] rounded-2xl mb-8 p-4 border shadow-lg cursor-pointer">
+      <div v-for="(product, index) in productData" :key="index" class="carousel__item bg-white xl:w-[285px] lg:w-[285px] md:w-[285px] w-[190px] mx-[4px] rounded-2xl mb-8 p-4 border shadow-lg cursor-pointer" data-te-lazy-load-init>
           <div>
             <img
-              :src="product.images"
+              data-te-lazy-load-init
+              :data-te-lazy-src="product.images"
+              data-te-lazy-placeholder="https://place-hold.it/1321x583?text=Loading"
               alt=""/>
           </div>
           <div class="mt-4">
@@ -190,12 +192,16 @@
 import "vue3-carousel/dist/carousel.css";
 import MockDATA from '../assets/Data/MOCK_DATA.json';
 import { Carousel, Slide, Navigation } from "vue3-carousel";
+import { Sidenav, LazyLoad, initTE } from "tw-elements"
 export default {
   name: "HomeView",
   components: {
     Carousel,
     Slide,
     Navigation,
+  },
+  mounted(){
+    initTE({ Sidenav,LazyLoad });
   },
   data() {
     return {
