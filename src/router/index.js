@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
 import ListAdmin from '../views/Dashboard/Admins/ListAdmin.vue'
+import ActionLog from '../views/Dashboard/Logs/ActionLog.vue'
 import LoginAdmin from '../views/Dashboard/Auth/LoginAdmin.vue'
 import LoginUser from '../views/Dashboard/Auth/LoginUser.vue'
 import RegisterUser from '../views/Dashboard/Auth/RegisterUser.vue'
@@ -84,6 +85,17 @@ const routes = [
       {
         path: '',
         component: LoginAdmin,
+      },
+    ],
+  },
+  {
+    path: '/admin/actionlog',
+    name: 'actionLog',
+    component: AdminLayout,
+    children: [
+      {
+        path: '',
+        component: ActionLog,
       },
     ],
   }
