@@ -36,7 +36,7 @@
       data-te-multi="true">
       </div>
       <div>
-        <pre><code ref="codeBlock" class="html">{{ code }}</code></pre>
+          <pre><code class="html" ref="codeBlock">{{code}} </code></pre>
       </div>
     </div>
 </template>
@@ -56,7 +56,8 @@ export default {
   data(){
     return {
       code: '<div>Hello, world!</div>',
-      isCollapsed: false
+      isCollapsed: true,
+      ref:null
     };
   },
   watch: {
@@ -67,19 +68,22 @@ export default {
     }
   },
   methods: {
+    toggleCollapse() {
+      this.isCollapsed = !this.isCollapsed;
+    },
     initDatatable() {
-        const dataChange = `<div class="grid gap-4 md:grid-cols-2 w-[600px]">
+        const dataChange = `
+              <div class="grid gap-4 md:grid-cols-2 w-[600px]">
                 <div class="multi-collapse !visible hidden rounded-lg shadow-lg" data-te-collapse-item id="multiCollapseExample1">
-                    <div class="block rounded-lg bg-white p-6 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 dark:text-neutral-50 whitespace-normal">
-                        Some placeholder content for the first collapse component of this
-                    </div>
+                  <div v-if="${this.isCollapsed}">
+                    <pre><code class="html" ref="codeBlock"> ${this.code} </code></pre>
+                  </div>
                 </div>
                 <div class="multi-collapse !visible hidden rounded-lg shadow-lg" data-te-collapse-item id="multiCollapseExample2">
-                    <div class="block rounded-lg bg-white p-6 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 dark:text-neutral-50 whitespace-normal">
-                        Some placeholder content for the second collapse component of this
-                    </div>
+                  <div>
+                  </div>
                 </div>
-        </div>`
+              </div>`
       const data = {
         columns: [
           { label: 'ID', field: 'ID' },
@@ -90,20 +94,11 @@ export default {
         ],
         rows: [
             {
-            ID: '<strong>1</strong>',
-            userId: '<em>Admin-01</em>',
-            ip: '127.0.0.1',
-            actiondate: '10/02/2024',
-            action: '<a ' + 
-                    'class="font-bold text-green-400" ' +
-                    'data-te-collapse-init ' +
-                    'data-te-ripple-init ' +
-                    'data-te-ripple-color="light" ' +
-                    'aria-expanded="false" ' +
-                    'data-te-target=".multi-collapse" ' +
-                    'role="button" ' +
-                    'aria-controls="multiCollapseExample1 multiCollapseExample2">' +
-                    'Create Data</a> - Tạo người dùng mới trong bảng "Admins" ' + dataChange,
+              ID: '<strong>1</strong>',
+              userId: '<em>Admin-01</em>',
+              ip: '127.0.0.1',
+              actiondate: '10/02/2024',
+              action: `<a @click="toggleCollapse" class="font-bold text-green-400" v-if="isCollapsed" data-te-collapse-init data-te-ripple-init data-te-ripple-color="light" aria-expanded="false" data-te-target=".multi-collapse" role="button" aria-controls="multiCollapseExample1 multiCollapseExample2">Create Data</a> - Tạo người dùng mới trong bảng "Admins" ${dataChange}`,
             },
             {
             ID: '<strong>2</strong>',
@@ -157,8 +152,11 @@ export default {
       });
     },
     highlightCode() {
-      hljs.highlightBlock(this.$refs.codeBlock);
+      if(this.isCollapsed){
+        hljs.highlightElement(this.$refs.codeBlock);
+      }
     }
+
   },
 };
 </script>
