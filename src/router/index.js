@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import AboutView from '../views/AboutView.vue'
+import NewsView from '../views/NewsView.vue'
 import ListAdmin from '../views/Dashboard/Admins/ListAdmin.vue'
 import ActionLog from '../views/Dashboard/Logs/ActionLog.vue'
 import LoginAdmin from '../views/Dashboard/Auth/LoginAdmin.vue'
@@ -22,13 +22,13 @@ const routes = [
     ],
   },
   {
-    path: '/about',
-    name: 'about',
+    path: '/news',
+    name: 'news',
     component: DefaultLayout,
     children: [
       {
         path: '',
-        component: AboutView,
+        component: NewsView,
       },
     ],
   },
@@ -61,7 +61,7 @@ const routes = [
     children: [
       {
         path: '',
-        component: AboutView,
+        component: '',
       },
     ],
   },

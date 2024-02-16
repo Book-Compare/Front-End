@@ -286,7 +286,7 @@
                 </router-link>
               </li>
               <li>
-                <router-link to="/admin" class="text-[#183d6d]">
+                <router-link to="/news" class="text-[#183d6d]">
                 Blog +
                 </router-link>
               </li>
