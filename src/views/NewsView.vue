@@ -1,7 +1,11 @@
 <template>
-<div class="container my-12 mx-auto xl:px-32 lg:px-12">
+<div class="container my-1 mx-auto 2xl:px-32">
+
   <section class="mb-32 text-center">
-    <h2 class="mb-12 text-center text-3xl font-bold">News book</h2>
+    <!-- Breadcrumb -->
+    <BreadCrumbs :breadcrumbs="breadcrumbsList" />
+    <!-- End Breadcrumb -->
+    <h2 class="mb-12 text-center text-3xl font-bold">Tin tức sách</h2>
     <div class="flex">
       <div class="flex flex-wrap w-[70%]" v-if="loading">
         <div  role="status" v-for="article in articles" :key="article.title"  class="space-y-8 animate-pulse md:space-y-0 md:space-x-14 rtl:space-x-reverse md:flex md:items-center md:flex-col">
@@ -33,6 +37,9 @@
 
       <!-- Sub news container -->
       <div class="container w-[30%]">
+        <div v-if="!loading_sub" class="pl-4 bg-red-500 ml-6" >
+          <h5 class="mb-4 text-xl font-bold text-white">Tin nổi bật</h5>
+        </div>
         <section class="mb-32 text-center md:text-left">  
           <div class="flex flex-wrap" v-if="loading_sub">
             <div role="status" v-for="index in 6" :key="index" class="mb-4 space-y-8 animate-pulse md:space-y-0 md:space-x-8 rtl:space-x-reverse md:flex items-center">
@@ -191,6 +198,7 @@
 </template>
 <script>
 import axios from 'axios';
+import BreadCrumbs from '@/components/BreadCrumbs.vue';
 
 export default {
   data() {
@@ -198,8 +206,15 @@ export default {
       loading: true,
       loading_sub: true,
       articles: [],
-      defaultImg : 'https://via.placeholder.com/50'
+      defaultImg : 'https://via.placeholder.com/50',
+      breadcrumbsList: [
+        { text: 'Trang chủ', link: '/' },
+        { text: 'Tin tức' }
+      ]
     };
+  },
+  components: {
+    BreadCrumbs
   },
   mounted() {
     this.fetchAppleNews();

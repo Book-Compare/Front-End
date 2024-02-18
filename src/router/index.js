@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import NewsView from '../views/NewsView.vue'
+import DetailView from '../views/DetailView.vue'
 import ListAdmin from '../views/Dashboard/Admins/ListAdmin.vue'
 import ActionLog from '../views/Dashboard/Logs/ActionLog.vue'
 import LoginAdmin from '../views/Dashboard/Auth/LoginAdmin.vue'
@@ -8,6 +9,7 @@ import LoginUser from '../views/Dashboard/Auth/LoginUser.vue'
 import RegisterUser from '../views/Dashboard/Auth/RegisterUser.vue'
 import DefaultLayout from '../layouts/users/TheDefaultLayout.vue'
 import AdminLayout from '../layouts/Admin/AdminLayout.vue'
+
 
 const routes = [
   {
@@ -18,6 +20,18 @@ const routes = [
       {
         path: '',
         component: HomeView,
+      },
+    ],
+  },
+  {
+    path: '/:name',
+    name: 'detail',
+    component: DefaultLayout,
+    props: true,
+    children: [
+      {
+        path: '',
+        component: DetailView,
       },
     ],
   },
@@ -35,7 +49,7 @@ const routes = [
   {
     path: '/login',
     name: 'login',
-    component: LoginUser,
+    component: DefaultLayout,
     children: [
       {
         path: '',

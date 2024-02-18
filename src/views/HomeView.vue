@@ -117,37 +117,34 @@
     </div>
     <div class="flex justify-center flex-wrap  xl:justify-between lg:justify-between w-full">
       <div v-for="(product, index) in productData" :key="index" class="carousel__item bg-white xl:w-[285px] lg:w-[285px] md:w-[285px] w-[190px] mx-[4px] rounded-2xl mb-8 p-4 border shadow-lg cursor-pointer" data-te-lazy-load-init>
-          <div>
-            <img
-              data-te-lazy-load-init
-              :data-te-lazy-src="product.images"
-              data-te-lazy-placeholder="https://place-hold.it/1321x583?text=Loading"
-              alt=""/>
-          </div>
-          <div class="mt-4">
-            <p class="text-start line-clamp-2 h-[48px]">
-              {{ product.name }}
-              
-            </p>
-            <div class="text-start mt-2">
-              <div class="flex items-center">
-                <span class="text-start text-red-600 font-bold text-[18px]"
-                  >{{ formatNumber(product.price) }}đ</span
-                >
-                <span
-                  class="text-center bg-red-600 p-[5px] ml-2 rounded text-white font-bold text-[1rem]"
-                  >-30%</span
-                >
-              </div>
-              <div>
-                <span class="line-through">189.000</span>
-              </div>
+        <router-link :to="'/' + product.name.replace(/\s+/g, '-')">
+            <div>
+                <img
+                    data-te-lazy-load-init
+                    :data-te-lazy-src="product.images"
+                    data-te-lazy-placeholder="https://place-hold.it/1321x583?text=Loading"
+                    alt=""/>
             </div>
-            <!-- <div>
-              <button type="button" class="mt-4 focus:outline-none text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">Xem chi tiết</button>
-            </div> -->
-          </div>
-        </div>
+            <div class="mt-4">
+                <p class="text-start line-clamp-2 h-[48px]">
+                    {{ product.name }}
+                </p>
+                <div class="text-start mt-2">
+                    <div class="flex items-center">
+                        <span class="text-start text-red-600 font-bold text-[18px]">
+                            {{ formatNumber(product.price) }}đ
+                        </span>
+                        <span class="text-center bg-red-600 p-[5px] ml-2 rounded text-white font-bold text-[1rem]">
+                            -30%
+                        </span>
+                    </div>
+                    <div>
+                        <span class="line-through">189.000</span>
+                    </div>
+                </div>
+            </div>
+        </router-link>
+      </div>
     </div>
   </div>
   <!-- End popular product -->
