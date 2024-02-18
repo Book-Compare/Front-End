@@ -16,6 +16,9 @@ const routes = [
     path: '/',
     name: 'home',
     component: DefaultLayout,
+    meta: {
+      title: 'Sosanhsach.com - Trang so sánh các sản phẩm về sách'
+    },
     children: [
       {
         path: '',
@@ -136,6 +139,9 @@ router.beforeEach((to, from, next) => {
     // If the route does not require authentication, proceed to the route
     next();
   }
+    document.title = to.params.name ? `${to.params.name.split('-').join(' ')} - Sosanhsach.com`
+     : to.meta.title || 'Tên mặc định nếu không có title';
+    next();
 });
 
 export default router

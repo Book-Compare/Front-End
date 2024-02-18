@@ -105,12 +105,13 @@
       <nav
         class="flex items-center  py-0 px-0 h-[50px] border-b-[1px] border-gray-300 mb-4 justify-between">
         <div class="flex w-full md:w-2/5 justify-between py-0 items-center tracking-wide">
-          <div class=" leading-10">
-            <img
-              class="w-[120px] h-[120px] mix-blend-multiply mb-2"
-              src="https://static.vecteezy.com/system/resources/previews/000/599/214/original/book-reading-logo-and-symbols-template-icons-vector.jpg"
-              alt=""/>
-          </div>
+          <router-link to="/">
+            <div class=" leading-10">
+              <img
+                class="w-56 h-auto mix-blend-multiply mb-2"
+                :src="Logo" alt="Logo"/>
+            </div>
+          </router-link>
           <div class="w-[120px]">
             <div class="group relative md:hidden text-center w-1/5 inline-block">
                 <span 
@@ -332,6 +333,7 @@
 
 <script>
 import LoadingSpinner from '@/components/loading.vue';
+import Logo from '@/assets/logo.png';
 import { Sidenav, initTE } from "tw-elements"
 export default {
   name: "DefaultLayout",
@@ -344,6 +346,7 @@ export default {
         loading: false,
         isDropdownVisible: false,
         token: localStorage.getItem('token'),
+        Logo: Logo
       };
   },
   mounted(){
