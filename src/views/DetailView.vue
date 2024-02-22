@@ -51,7 +51,7 @@
                                 Harry Potter And The Philosopher's Stone: Minalima Edition
                         </p>
                      </div>
-                    <div class="block mt-2 rounded-lg bg-white p-6 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+                    <div class="block mt-2 rounded-lg bg-[#f4f5f9] p-6  dark:bg-neutral-700">
                         <!-- Infomation -->
                         <div class="flex justify-between flex-wrap">
                             <p class="w-1/2 text-sm text-start line-clamp-1 mb-2">Nhà cung cấp: 
@@ -84,7 +84,7 @@
                             <ul class="my-1 flex list-none gap-1 p-0" data-te-rating-init data-te-readonly="true" data-te-value="5">
                             <li>
                                 <span
-                                class="text-[#673ab7] [&>svg]:h-5 [&>svg]:w-5"
+                                class="text-primary [&>svg]:h-5 [&>svg]:w-5"
                                 data-te-rating-icon-ref>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -101,7 +101,7 @@
                             </li>
                             <li>
                                 <span
-                                class="text-[#3f51b5] [&>svg]:h-5 [&>svg]:w-5"
+                                class="text-primary [&>svg]:h-5 [&>svg]:w-5"
                                 data-te-rating-icon-ref>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -118,7 +118,7 @@
                             </li>
                             <li>
                                 <span
-                                class="text-[#2196f3] [&>svg]:h-5 [&>svg]:w-5"
+                                class="text-primary [&>svg]:h-5 [&>svg]:w-5"
                                 data-te-rating-icon-ref>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -135,7 +135,7 @@
                             </li>
                             <li>
                                 <span
-                                class="text-[#03a9f4] [&>svg]:h-5 [&>svg]:w-5"
+                                class="text-primary [&>svg]:h-5 [&>svg]:w-5"
                                 data-te-rating-icon-ref>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -152,7 +152,7 @@
                             </li>
                             <li>
                                 <span
-                                class="text-[#00bcd4] [&>svg]:h-5 [&>svg]:w-5"
+                                class="text-primary [&>svg]:h-5 [&>svg]:w-5"
                                 data-te-rating-icon-ref>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -172,7 +172,23 @@
                         </div>
                     </div>
 
-                    <div class="block mt-2 rounded-lg bg-white p-6 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+                    <div class="block mt-3 rounded-lg bg-[#f4f5f9] p-6 dark:bg-neutral-700">
+                        <div class="flex items-center">
+                            <span class="material-symbols-outlined mr-2">
+                                description
+                            </span>
+                            <p class="text-sm font-bold text-start line-clamp-1">
+                                Nội dung:
+                            </p>
+                        </div>
+                        <p class="line-clamp-4 text-start">
+                            An irresistible new edition of Harry Potter and the Philosopher's Stone created with ultra-talented designers MinaLima, the design magicians behind the gorgeous visual graphic style of the Harry Potter and Fantastic Beasts films. J.K. Rowling's complete and unabridged text is accompanied by MinaLima's handsome colour illustrations on nearly every page, superb design, and eight exclusive interactive paper-engineered elements – including Harry's Hogwarts letter, the magical entrance to Diagon Alley, a sumptuous feast in the Great Hall of Hogwarts and more.
+                    
+                            Designed and illustrated by the iconic house of MinaLima – best known for establishing the graphic design of the Harry Potter and Fantastic Beasts films – this is the perfect gift for Harry Potter fans and a beautiful addition to any collector's bookshelf, enticing readers of all ages to discover the Harry Potter novels all over again.
+                        </p>
+                    </div>
+
+                    <div class="block mt-3 rounded-lg bg-[#f4f5f9] p-6 dark:bg-neutral-700">
                         <div class="flex items-center">
                             <span class="material-symbols-outlined mr-2">
                                 storefront
@@ -194,7 +210,7 @@
                 </div>
             </div>
             <!-- Coupon container -->
-            <div class=" p-4"> 
+            <div class="p-4"> 
                 <div class="flex items-center">
                         <span class="material-symbols-outlined mr-2">
                             sell
@@ -300,6 +316,55 @@
                     aria-labelledby="tabs-contact-tab">
                     Tab 4 content
                 </div>
+                </div>
+            </div>
+            <!-- Price container -->
+            <div class="p-4">
+                <div class="flex items-center">
+                        <span class="material-symbols-outlined mr-2">
+                            sell
+                        </span>
+                        <p class="text-2xl font-bold text-start line-clamp-1 relative">
+                            Giá tại các cửa hàng
+                        </p>
+                </div>
+                <div class="mt-4">
+                    <div v-for="index in 4" :key="index" class="w-full bg-[#f4f5f9] rounded-xl h-24 mb-4 flex items-center px-4">
+                        <div class="w-1/4 flex items-center">
+                            <img src="https://p-vn.ipricegroup.com/october-cms/PI+Icon+consolidation/Shopee_allCC_icon.png" class="w-12 h-12" alt="">
+                            <div>
+                                <p class="text-md font-bold ml-2">Shoppe</p>
+                            </div>
+                        </div>
+                        <div class="flex w-1/4">
+                            <p class="flex items-center mx-2 whitespace-nowrap rounded-[0.27rem] bg-primary-100 px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-primary-700">
+                                <span class="material-symbols-outlined">
+                                location_on
+                                </span>
+                                Hồ Chí Minh
+                            </p>
+                            <p class="flex items-center mx-2 whitespace-nowrap rounded-[0.27rem] bg-primary-100 px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-primary-700">
+                                <span class="material-symbols-outlined">
+                                location_on
+                                </span>
+                                Hà Nội
+                            </p>
+                        </div>
+                        <div class="w-1/4">
+                            <p class="text-lg text-red-600 font-medium">23.590.000 đ</p>
+                        </div>
+                        <div class="w-1/4">
+                            <button type="button"
+                                    data-te-ripple-init
+                                    data-te-ripple-color="light"
+                                    class="flex items-center mx-auto rounded bg-[#183D6D] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-[#183D6D] hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-[#183D6D] focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-[#183D6D] active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 21v-7.5a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 .75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349M3.75 21V9.349m0 0a3.001 3.001 0 0 0 3.75-.615A2.993 2.993 0 0 0 9.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 0 0 2.25 1.016c.896 0 1.7-.393 2.25-1.015a3.001 3.001 0 0 0 3.75.614m-16.5 0a3.004 3.004 0 0 1-.621-4.72l1.189-1.19A1.5 1.5 0 0 1 5.378 3h13.243a1.5 1.5 0 0 1 1.06.44l1.19 1.189a3 3 0 0 1-.621 4.72M6.75 18h3.75a.75.75 0 0 0 .75-.75V13.5a.75.75 0 0 0-.75-.75H6.75a.75.75 0 0 0-.75.75v3.75c0 .414.336.75.75.75Z" />
+                                    </svg>
+                                 Tới nơi bán
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
