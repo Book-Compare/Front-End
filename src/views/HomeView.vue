@@ -202,6 +202,7 @@ export default {
   },
   mounted(){
     initTE({ Sidenav,LazyLoad });
+    window.scrollTo(0, 0);
   },
   data() {
     return {

@@ -272,7 +272,16 @@
                     data-te-tab-active>
                     <!-- component -->
                     <div class="flex">
-                        <div v-for="index in 3" :key="index" class="container mx-auto w-1/3 px-2">     
+                        <div v-for="index in 3" :key="index" class="container mx-auto w-1/3 px-2">  
+                            <div
+                                id="container-example"
+                                class="fixed right-0 top-0 z-[2000] mr-3 mt-[59px] hidden w-1/4 items-center rounded-lg bg-success-400 px-6 py-4 text-base text-white data-[te-alert-show]:inline-flex"
+                                role="alert"
+                                data-te-alert-init
+                                data-te-autohide="true"
+                                data-te-delay="4000">
+                                Bạn đã copy mã giảm giá
+                            </div>   
                             <div class="bg-gradient-to-br from-indigo-600 to-purple-600 text-white text-center py-10 px-20  h-[150px] rounded-lg shadow-md relative">
                                 <!-- <img src="https://i.postimg.cc/KvTqpZq9/uber.png" class="w-20 mx-auto mb-4 rounded-lg"> -->
                                 <h3 class="text-sm font-semibold mb-4">MÃ GIẢM 10K - ĐƠN HÀNG TỪ 150K</h3>
@@ -282,6 +291,7 @@
                                             class="border-dashed border text-white px-4 py-2 rounded-l">STEALDEAL20</div>
                                     <button id="copy-button"
                                         type="button"
+                                        @click=showAlertClipboard
                                         data-te-clipboard-init
                                         :data-te-clipboard-target="'#copy-target-' + index"
                                         data-te-ripple-init
@@ -373,7 +383,7 @@
 
 <script>
 import BreadCrumbs from '@/components/BreadCrumbs.vue';
-import { Lightbox, initTE, Rating, Tab,Clipboard, Ripple, } from "tw-elements"
+import { Lightbox, initTE, Rating, Tab,Clipboard, Ripple,  Alert} from "tw-elements"
 
 export default{
     data() {
@@ -388,7 +398,8 @@ export default{
     },
     mounted() {
         this.updateBreadcrumbs();
-        initTE({ Lightbox,Rating,Tab,Clipboard, Ripple });
+        initTE({ Lightbox,Rating,Tab,Clipboard, Ripple,Alert });
+        window.scrollTo(0, 0);
     },
     methods: {
         updateBreadcrumbs() {
@@ -396,6 +407,13 @@ export default{
             let modifiedName = originalName.replace(/-/g, " "); // Chuyển đổi dấu gạch ngang thành khoảng trắng
             this.breadcrumbsList.push({ text: modifiedName }); // Thêm vào breadcrumbsList
         },
+
+        showAlertClipboard(){
+            const alertInstance = Alert.getInstance(
+                document.getElementById("container-example")
+                );
+            alertInstance.show();
+        }
     },
 }
 </script>
