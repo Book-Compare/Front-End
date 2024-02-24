@@ -140,7 +140,7 @@ router.beforeEach((to, from, next) => {
     next();
   }
     document.title = to.params.name ? `${to.params.name.split('-').join(' ')} - Sosanhsach.com`
-     : to.meta.title || 'Tên mặc định nếu không có title';
+     : to.meta.title || 'Trang không tồn tại';
     next();
 });
 

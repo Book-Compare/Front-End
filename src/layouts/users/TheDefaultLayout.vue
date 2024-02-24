@@ -590,7 +590,7 @@ export default {
       // Hide spinner after navigation is complete
       this.loading = false;
       next();
-    }, 700); // Adjust the time as needed
+    }, 500); // Adjust the time as needed
   },
   methods:{
     toggleDropdown() {
