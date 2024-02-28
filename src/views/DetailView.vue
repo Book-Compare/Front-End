@@ -377,12 +377,27 @@
                     </div>
                 </div>
             </div>
+            <!-- Other product -->
+            <div class="p-4">
+                <div class="flex items-center">
+                    <span class="material-symbols-outlined mr-2">
+                        sell
+                    </span>
+                    <p class="text-2xl font-bold text-start line-clamp-1 relative">
+                        Sản phẩm liên quan
+                    </p>
+                </div>
+                <div class="flex gap-6 mt-4">
+                    <ProductCard  v-for="(product, index) in products" :key="index" :product="product" />
+                </div>
+            </div>
         </section>
     </div>
 </template>
 
 <script>
 import BreadCrumbs from '@/components/BreadCrumbs.vue';
+import ProductCard from '@/components/ProductCard.vue';
 import { Lightbox, initTE, Rating, Tab,Clipboard, Ripple,  Alert} from "tw-elements"
 
 export default{
@@ -390,11 +405,19 @@ export default{
         return {
             breadcrumbsList: [
                 { text: 'Trang chủ', link: '/' },
+            ],
+            products: [
+                { id: 1, name: 'Harry Potter Và Tên Tù Nhân Ngục Azkaban - Tập 3 (Tái Bản) 1', price: 100000 },
+                { id: 2, name: 'Harry Potter Và Tên Tù Nhân Ngục Azkaban - Tập 3 (Tái Bản) 2', price: 200000 },
+                { id: 3, name: 'Harry Potter Và Tên Tù Nhân Ngục Azkaban - Tập 3 (Tái Bản) 3', price: 300000 },
+                { id: 4, name: 'Harry Potter Và Tên Tù Nhân Ngục Azkaban - Tập 3 (Tái Bản) 4', price: 400000 },
+                { id: 5, name: 'Harry Potter Và Tên Tù Nhân Ngục Azkaban - Tập 3 (Tái Bản) 5', price: 500000 },
             ]
         };
     },
     components: {
         BreadCrumbs,
+        ProductCard
     },
     mounted() {
         this.updateBreadcrumbs();
@@ -413,7 +436,7 @@ export default{
                 document.getElementById("container-example")
                 );
             alertInstance.show();
-        }
+        },
     },
 }
 </script>
