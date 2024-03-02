@@ -84,7 +84,7 @@
                             <ul class="my-1 flex list-none gap-1 p-0" data-te-rating-init data-te-readonly="true" data-te-value="5">
                             <li>
                                 <span
-                                class="text-primary [&>svg]:h-5 [&>svg]:w-5"
+                                class="text-primary [&>svg]:h-4 [&>svg]:w-5"
                                 data-te-rating-icon-ref>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -101,7 +101,7 @@
                             </li>
                             <li>
                                 <span
-                                class="text-primary [&>svg]:h-5 [&>svg]:w-5"
+                                class="text-primary [&>svg]:h-4 [&>svg]:w-5"
                                 data-te-rating-icon-ref>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -118,7 +118,7 @@
                             </li>
                             <li>
                                 <span
-                                class="text-primary [&>svg]:h-5 [&>svg]:w-5"
+                                class="text-primary [&>svg]:h-4 [&>svg]:w-5"
                                 data-te-rating-icon-ref>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -135,7 +135,7 @@
                             </li>
                             <li>
                                 <span
-                                class="text-primary [&>svg]:h-5 [&>svg]:w-5"
+                                class="text-primary [&>svg]:h-4 [&>svg]:w-5"
                                 data-te-rating-icon-ref>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -152,7 +152,7 @@
                             </li>
                             <li>
                                 <span
-                                class="text-primary [&>svg]:h-5 [&>svg]:w-5"
+                                class="text-primary [&>svg]:h-4 [&>svg]:w-5"
                                 data-te-rating-icon-ref>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -373,6 +373,130 @@
                                     </svg>
                                  Tới nơi bán
                             </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        <!-- Comment product -->
+                        <div class="p-4">
+                <div class="flex items-center">
+                    <span class="material-symbols-outlined mr-2">
+                        reviews
+                    </span>
+                    <p class="text-2xl font-bold text-start line-clamp-1 relative">
+                        Đánh giá
+                    </p>
+                </div>
+                <div class="flex gap-6 mt-4">
+                    <div class="w-1/2">
+                        <div class="flex items-center mb-2">
+                            <svg class="w-4 h-4 text-yellow-300 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                            </svg>
+                            <svg class="w-4 h-4 text-yellow-300 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                            </svg>
+                            <svg class="w-4 h-4 text-yellow-300 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                            </svg>
+                            <svg class="w-4 h-4 text-yellow-300 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                            </svg>
+                            <svg class="w-4 h-4 text-gray-300 me-1 dark:text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                            </svg>
+                            <p class="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400">4.95</p>
+                            <p class="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400">trên</p>
+                            <p class="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400">5</p>
+                        </div>
+                        <p class="text-sm text-start font-medium text-gray-500 dark:text-gray-400">1,745 lượt đánh giá</p>
+                        <div class="flex items-center mt-4">
+                            <a href="#" class="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">5 star</a>
+                            <div class="w-3/5 h-4 mx-4 bg-gray-200 rounded-xl dark:bg-gray-700">
+                                <div class="h-4 bg-yellow-300 rounded-xl" style="width: 70%"></div>
+                            </div>
+                            <span class="text-sm font-medium text-gray-500 dark:text-gray-400">70%</span>
+                        </div>
+                        <div class="flex items-center mt-4">
+                            <a href="#" class="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">4 star</a>
+                            <div class="w-3/5 h-4 mx-4 bg-gray-200 rounded-xl dark:bg-gray-700">
+                                <div class="h-4 bg-yellow-300 rounded-xl" style="width: 17%"></div>
+                            </div>
+                            <span class="text-sm font-medium text-gray-500 dark:text-gray-400">17%</span>
+                        </div>
+                        <div class="flex items-center mt-4">
+                            <a href="#" class="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">3 star</a>
+                            <div class="w-3/5 h-4 mx-4 bg-gray-200 rounded-xl dark:bg-gray-700">
+                                <div class="h-4 bg-yellow-300 rounded-xl" style="width: 8%"></div>
+                            </div>
+                            <span class="text-sm font-medium text-gray-500 dark:text-gray-400">8%</span>
+                        </div>
+                        <div class="flex items-center mt-4">
+                            <a href="#" class="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">2 star</a>
+                            <div class="w-3/5 h-4 mx-4 bg-gray-200 rounded-xl dark:bg-gray-700">
+                                <div class="h-4 bg-yellow-300 rounded-xl" style="width: 4%"></div>
+                            </div>
+                            <span class="text-sm font-medium text-gray-500 dark:text-gray-400">4%</span>
+                        </div>
+                        <div class="flex items-center mt-4">
+                            <a href="#" class="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">1 star</a>
+                            <div class="w-3/5 h-4 mx-4 bg-gray-200 rounded-xl dark:bg-gray-700">
+                                <div class="h-4 bg-yellow-300 rounded-xl" style="width: 1%"></div>
+                            </div>
+                            <span class="text-sm font-medium text-gray-500 dark:text-gray-400">1%</span>
+                        </div>   
+
+                        <div class="text-start w-4/5 mt-8">
+                            <h5 class="font-medium text-xl">Chia sẻ cảm nghĩ của bạn</h5>
+                            <p>Nếu bạn đã sử dụng sản phẩm này, hãy chia sẻ suy nghĩ của bạn với các khách hàng khác</p>
+                            <button
+                            type="button"
+                            data-te-ripple-init
+                            data-te-ripple-color="light"
+                            class="mt-2 w-full flex items-center justify-center gap-1 rounded bg-[#183D6D] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
+                            <span class="material-symbols-outlined">
+                            rate_review
+                            </span>
+                            Viết Đánh Giá
+                            </button>
+                        </div>
+                    </div>
+                    <div class="w-1/2">
+                        <div>
+                            <div v-for="index of 3" :key="index" class="flex flex-col pb-4 mb-4 border-b border-gray-200">
+                                <div class="flex justify-between items-center">
+                                    <div class="flex items-center">
+                                            <img
+                                            src="https://scontent-hkg1-2.xx.fbcdn.net/v/t39.30808-6/418534720_3453300551483310_5042243830463284745_n.jpg?stp=dst-jpg_p526x296&_nc_cat=103&ccb=1-7&_nc_sid=9c7eae&_nc_ohc=T8lu0Z2J7SYAX9R7ZMy&_nc_ht=scontent-hkg1-2.xx&oh=00_AfCPfK1bNk1ojOXi3u91Rn0JfPjEiwFnzD24i6-EPxQFYg&oe=65E76F48"
+                                            class="w-10 rounded-full"
+                                            alt="Avatar" />
+                                            <div class="flex flex-col flex-start text-start ml-4">
+                                                <h5 class="text-md font-medium">Trung Tin Nguyen</h5>
+                                                <p class="text-neutral-500 text-sm dark:text-neutral-400">21 ngày trước</p>
+                                            </div>
+                                    </div>
+                                    <div class="flex">
+                                        <svg class="w-4 h-4 text-yellow-300 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                                        </svg>
+                                        <svg class="w-4 h-4 text-yellow-300 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                                        </svg>
+                                        <svg class="w-4 h-4 text-yellow-300 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                                        </svg>
+                                        <svg class="w-4 h-4 text-yellow-300 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                                        </svg>
+                                        <svg class="w-4 h-4 text-gray-300 me-1 dark:text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="text-start mt-4">
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis optio expedita ut fuga earum iste officia voluptatum fugiat velit harum, sed voluptatem voluptatibus, quae eum ratione quidem autem quaerat sapiente?</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
