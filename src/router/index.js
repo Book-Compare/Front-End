@@ -1,7 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import NewsView from '../views/NewsView.vue'
+import DetailNewsView from '../views/DetailNewsView.vue'
 import DetailView from '../views/DetailView.vue'
+import ProductView from '../views/ProductView.vue'
 import ListAdmin from '../views/Dashboard/Admins/ListAdmin.vue'
 import ActionLog from '../views/Dashboard/Logs/ActionLog.vue'
 import LoginAdmin from '../views/Dashboard/Auth/LoginAdmin.vue'
@@ -39,6 +41,18 @@ const routes = [
     ],
   },
   {
+    path: '/product',
+    name: 'product',
+    component: DefaultLayout,
+    props: true,
+    children: [
+      {
+        path: '',
+        component: ProductView,
+      },
+    ],
+  },
+  {
     path: '/news',
     name: 'news',
     component: DefaultLayout,
@@ -46,6 +60,17 @@ const routes = [
       {
         path: '',
         component: NewsView,
+      },
+    ],
+  },
+  {
+    path: '/news/:id',
+    name: 'detail news',
+    component: DefaultLayout,
+    children: [
+      {
+        path: '',
+        component: DetailNewsView,
       },
     ],
   },

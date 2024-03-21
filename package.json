@@ -11,8 +11,11 @@
     "axios": "^1.6.5",
     "core-js": "^3.8.3",
     "highlight.js": "^11.9.0",
+    "primeflex": "^3.3.1",
+    "primevue": "^3.50.0",
     "tw-elements": "^1.1.0",
     "vue": "^3.4.15",
+    "vue-i18n": "^9.10.2",
     "vue-router": "^4.0.3",
     "vue3-carousel": "^0.3.1",
     "vue3-toastify": "^0.2.1"

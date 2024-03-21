@@ -1,0 +1,11 @@
+{
+    "email": {
+        "label": "Email",
+        "placeholder": "Nhập email"
+    },
+    "password": {
+        "label": "Mật khẩu",
+        "placeholder": "Nhập password",
+        "forgot": "Quên mật khẩu"
+    }
+}

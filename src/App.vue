@@ -8,6 +8,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #183d6d;
+  position: relative;
 }
 
 nav {

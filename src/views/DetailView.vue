@@ -531,11 +531,10 @@ export default{
                 { text: 'Trang chủ', link: '/' },
             ],
             products: [
-                { id: 1, name: 'Harry Potter Và Tên Tù Nhân Ngục Azkaban - Tập 3 (Tái Bản) 1', price: 100000 },
-                { id: 2, name: 'Harry Potter Và Tên Tù Nhân Ngục Azkaban - Tập 3 (Tái Bản) 2', price: 200000 },
-                { id: 3, name: 'Harry Potter Và Tên Tù Nhân Ngục Azkaban - Tập 3 (Tái Bản) 3', price: 300000 },
-                { id: 4, name: 'Harry Potter Và Tên Tù Nhân Ngục Azkaban - Tập 3 (Tái Bản) 4', price: 400000 },
-                { id: 5, name: 'Harry Potter Và Tên Tù Nhân Ngục Azkaban - Tập 3 (Tái Bản) 5', price: 500000 },
+                { id: 1, name: '東京リベンジャーズ TVアニメ公式ガイドブック', price: 100000 , image:"https://cdn0.fahasa.com/media/catalog/product/i/m/image_244718_1_4139.jpg" },
+                { id: 2, name: 'TVアニメ公式ガイドブック ハイキュー!! セイシュンメイカン!! -', price: 100000 , image:"https://cdn0.fahasa.com/media/catalog/product/i/m/image_205941.jpg" },
+                { id: 3, name: '[Anime Comics] One Piece Stampede - Tập 1', price: 100000 , image:"https://cdn0.fahasa.com/media/catalog/product/a/n/anime-comics-one-piece-stampede_bia_tap-1.jpg" },
+                { id: 4, name: 'TVアニメ 呪術廻戦 公式スタートガイド TV ANIME', price: 100000 , image:"https://cdn0.fahasa.com/media/catalog/product/i/m/image_238322.jpg" },
             ]
         };
     },

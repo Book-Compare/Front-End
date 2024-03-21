@@ -68,7 +68,7 @@
       <span class="material-symbols-outlined text-3xl text-white">
         trending_down
       </span>
-      <h1 class="text-3xl font-bold tracking-tight text-white ml-4">Giảm giá sốc</h1>
+      <h1 class="text-3xl font-bold tracking-tight text-white ml-4">{{ $t('title.discount_product') }}</h1>
     </div>
 
     <Carousel v-bind="settings" :breakpoints="breakpoints">
@@ -113,38 +113,10 @@
   <div class="w-full  text-start mb-10">
     <div class="flex">
       <span class="material-symbols-outlined text-3xl mr-2">trending_up</span>
-      <h2 class="mb-6 text-3xl font-bold tracking-tight text-gray-900">Sản phẩm nổi bật</h2>
+      <h2 class="mb-6 text-3xl font-bold tracking-tight text-gray-900">{{ $t('title.hot_product') }}</h2>
     </div>
-    <div class="flex justify-center flex-wrap  xl:justify-between lg:justify-between w-full">
-      <div v-for="(product, index) in productData" :key="index" class="carousel__item bg-white xl:w-[285px] lg:w-[285px] md:w-[285px] w-[190px] mx-[4px] rounded-2xl mb-8 p-4 border shadow-lg cursor-pointer" data-te-lazy-load-init>
-        <router-link :to="'/' + product.name.replace(/\s+/g, '-')">
-            <div>
-                <img
-                    data-te-lazy-load-init
-                    :data-te-lazy-src="product.images"
-                    data-te-lazy-placeholder="https://place-hold.it/1321x583?text=Loading"
-                    alt=""/>
-            </div>
-            <div class="mt-4">
-                <p class="text-start line-clamp-2 h-[48px]">
-                    {{ product.name }}
-                </p>
-                <div class="text-start mt-2">
-                    <div class="flex items-center">
-                        <span class="text-start text-red-600 font-bold text-[18px]">
-                            {{ formatNumber(product.price) }}đ
-                        </span>
-                        <span class="text-center bg-red-600 p-[5px] ml-2 rounded text-white font-bold text-[1rem]">
-                            -30%
-                        </span>
-                    </div>
-                    <div>
-                        <span class="line-through">189.000</span>
-                    </div>
-                </div>
-            </div>
-        </router-link>
-      </div>
+    <div class="flex justify-center flex-wrap xl:justify-between lg:justify-between w-full">
+      <ProductCard  v-for="(product, index) in products" :key="index" :product="product" />
     </div>
   </div>
   <!-- End popular product -->
@@ -152,7 +124,7 @@
   <div class=" p-0 w-full text-start mb-10">
     <div class="flex">
       <span class="material-symbols-outlined text-3xl mr-2">news</span>
-      <h2 class="mb-6 text-3xl font-bold tracking-tight text-gray-900">Tin tức mỗi ngày</h2>
+      <h2 class="mb-6 text-3xl font-bold tracking-tight text-gray-900">{{ $t('title.news') }}</h2>
     </div>
     <div class="flex w-full gap-4">
         <div class="lg:w-3/5 xl:w-3/5 w-full cursor-pointer">
@@ -190,15 +162,16 @@
 
 <script>
 import "vue3-carousel/dist/carousel.css";
-import MockDATA from '../assets/Data/MOCK_DATA.json';
 import { Carousel, Slide, Navigation } from "vue3-carousel";
 import { Sidenav, LazyLoad, initTE } from "tw-elements"
+import ProductCard from '@/components/ProductCard.vue';
 export default {
   name: "HomeView",
   components: {
     Carousel,
     Slide,
     Navigation,
+    ProductCard
   },
   mounted(){
     initTE({ Sidenav,LazyLoad });
@@ -206,7 +179,16 @@ export default {
   },
   data() {
     return {
-      productData: MockDATA.slice(0, 20),
+      products: [
+                { id: 1, name: '東京リベンジャーズ TVアニメ公式ガイドブック', price: 100000 , image:"https://cdn0.fahasa.com/media/catalog/product/i/m/image_244718_1_4139.jpg" },
+                { id: 2, name: 'TVアニメ公式ガイドブック ハイキュー!! セイシュンメイカン!! -', price: 100000 , image:"https://cdn0.fahasa.com/media/catalog/product/i/m/image_205941.jpg" },
+                { id: 3, name: '[Anime Comics] One Piece Stampede - Tập 1', price: 100000 , image:"https://cdn0.fahasa.com/media/catalog/product/a/n/anime-comics-one-piece-stampede_bia_tap-1.jpg" },
+                { id: 4, name: 'TVアニメ 呪術廻戦 公式スタートガイド TV ANIME', price: 100000 , image:"https://cdn0.fahasa.com/media/catalog/product/i/m/image_238322.jpg" },
+                { id: 5, name: 'TVアニメ『鬼滅の刃』 公式キャラクターズブック 伍ノ巻', price: 100000 , image:"https://cdn0.fahasa.com/media/catalog/product/9/7/9784834217254.jpg" },
+                { id: 5, name: 'Nói Chuyện Là Bản Năng, Giữ Miệng Là Tu Dưỡng', price: 100000 , image:"https://cdn0.fahasa.com/media/catalog/product/8/9/8936066694469.jpg" },
+                { id: 5, name: '3 Step - Tiết Lộ Bí Quyết 3 Bước Đạt Điểm 8+ Tiếng Anh', price: 100000 , image:"https://cdn0.fahasa.com/media/catalog/product/i/m/image_195509_1_50142.jpg" },
+                { id: 5, name: 'Khéo Khôn Với Tiền - Tránh Những Ưu Phiền', price: 100000 , image:"https://cdn0.fahasa.com/media/catalog/product/k/h/kheo-khon-voi-tien_bia.jpg" },
+      ],
       slideOptions: {
         autoplay: 2000,
         transition: 1000,

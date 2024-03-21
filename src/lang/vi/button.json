@@ -1,0 +1,10 @@
+{
+    "search": "Tìm kiếm",
+    "login": "Đăng nhập",
+    "register": "Đăng ký",
+    "social": {
+        "google": "Google",
+        "facebook": "Facebook",
+        "github": "Github"
+    }
+}
